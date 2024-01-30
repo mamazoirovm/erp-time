@@ -3,7 +3,7 @@ import CrudPage from "../layout/CrudPage";
 const columns = [
   {
     title: "Name",
-    dataIndex: "firstName",
+    dataIndex: "name",
     key: "name",
   },
 ];

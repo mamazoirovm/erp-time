@@ -5,7 +5,7 @@ const columns = [
   {
     title: "Ism",
     dataIndex: "firstName",
-    key: "firstName",
+    key: "name",
     width: 180,
   },
   {

@@ -4,7 +4,7 @@ const columns = [
   {
     title: "Name",
     dataIndex: "name",
-    key: "name",
+    key: "name"
   },
 ];
 const forms = [

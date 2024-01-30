@@ -13,6 +13,8 @@ import useTeacher from "../hooks/useCrud";
 import { useForm } from "antd/es/form/Form";
 import useCrud from "../hooks/useCrud";
 const CrudPage = ({ pageColumns, title, pageForm, collectionName }) => {
+
+
   const handleEdit = (record) => {
     setEditing(record);
     setOpen(true);
@@ -26,7 +28,7 @@ const CrudPage = ({ pageColumns, title, pageForm, collectionName }) => {
     console.log(addTeacher);
   };
   const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
+    console.log("Failed:", errorInfo.message);
   };
 
   const {
@@ -39,7 +41,7 @@ const CrudPage = ({ pageColumns, title, pageForm, collectionName }) => {
     editing,
     setEditing,
     updateTeacher,
-  } = useCrud(collectionName);
+  } = useTeacher (collectionName);
   const columns = [
     {
         title: "№",
@@ -131,7 +133,7 @@ const CrudPage = ({ pageColumns, title, pageForm, collectionName }) => {
               ]}
               required
               label={page.label}
-              name={"firstName"}
+              name={page.name}
             >
               <Input />
             </Form.Item>
